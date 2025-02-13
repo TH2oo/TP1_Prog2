@@ -84,4 +84,14 @@ public class Cohort {
                     
         return maxGrade;
     }
+
+    public Grade averageCohort(){
+        double sumGrades = 0;
+
+        for (Student student : students){
+            sumGrades += student.averageGrade().getValue();
+        }
+
+        return new Grade(sumGrades / students.size());
+    }
 }
