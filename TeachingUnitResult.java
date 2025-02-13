@@ -15,6 +15,10 @@ public class TeachingUnitResult {
         return this.grade;
     }
 
+    public TeachingUnit getTeachingUnit(){
+        return this.teachingUnit;
+    }
+
     public String toString(){
         return teachingUnit.getName() + " : " + this.grade.toString(); 
     }
