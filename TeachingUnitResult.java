@@ -1,9 +1,9 @@
 public class TeachingUnitResult {
-    private final String teachingUnitName;
+    private final TeachingUnit teachingUnit;
     private final Grade grade;
     
-    public TeachingUnitResult(String teachingUnitName, Grade grade){
-        this.teachingUnitName = teachingUnitName;
+    public TeachingUnitResult(TeachingUnit teachingUnitName, Grade grade){
+        this.teachingUnit = teachingUnitName;
         this.grade = grade;
     }
 
@@ -16,7 +16,7 @@ public class TeachingUnitResult {
     }
 
     public String toString(){
-        return teachingUnitName + " : " + this.grade.toString(); 
+        return teachingUnit.getName() + " : " + this.grade.toString(); 
     }
     
 }
