@@ -29,6 +29,10 @@ public class Grade {
         else
             return "ABS /" + MAXIMUM_GRADE;
     }
+
+    public boolean isAbsent(){
+        return this.isAbsent;
+    }
     
     public static Grade averageGrade(List<Grade> grades){
         double sumOfGrades = 0;
