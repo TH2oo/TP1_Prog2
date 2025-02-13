@@ -51,4 +51,15 @@ public class Cohort {
 
         return numberStudentPass;
     }
+
+    public int numberOfABS(){
+        int nbABS = 0;
+
+        for (Student student : students)
+            for (Grade grade : student.getGrades())
+                if (grade.isAbsent())
+                    nbABS++;
+        
+        return nbABS;        
+    }
 }
