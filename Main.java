@@ -11,7 +11,7 @@ public class Main {
         student1.addResult("Structures discrètes", new Grade());
 
         student2.addResult("Programmation 2", new Grade(8.0));
-        student2.addResult("Structures discrètes", new Grade(22.0));
+        student2.addResult("Structures discrètes", new Grade(19.0));
 
         student3.addResult("Programmation 2", new Grade(8.0));
         student3.addResult("Structures discrètes", new Grade(3.0));
@@ -31,8 +31,14 @@ public class Main {
         // Afficher les résultats de la promotion
         cohort.printStudentsResults();
 
-        System.out.println(cohort.guessStudentPass());
 
-        System.out.println(cohort.numberOfABS());
+        System.out.println("Statistiques--------------------------------------------------------------\n");
+
+        System.out.println("Le nombre d'étudiant ayant leur semestre (moy > 10): " + cohort.guessStudentPass());
+
+        System.out.println("Le nombre d'absences aux exams : " + cohort.numberOfABS());
+
+        System.out.println("La meilleure note de la promo: " + cohort.maxGrade().getValue());
+        System.out.println("La pire note de la promo: " + cohort.minGrade().getValue());
     }
 }
