@@ -16,7 +16,7 @@ public class Student {
         return this == o;
     }
 
-    public void addResult(String teachingUnitName, Grade grade){
+    public void addResult(TeachingUnit teachingUnitName, Grade grade){
         this.results.add(new TeachingUnitResult(teachingUnitName, grade));
     }
 
