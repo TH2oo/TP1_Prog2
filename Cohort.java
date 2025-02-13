@@ -40,4 +40,15 @@ public class Cohort {
             System.out.println("\n");
         }
     }
+
+    public int studentPass(){
+        int numberStudentPass = 0;
+
+        for (Student students : this.students){
+            if (students.averageGrade().getValue() >= 10)
+                numberStudentPass++;
+        }
+        
+        return numberStudentPass;
+    }
 }
