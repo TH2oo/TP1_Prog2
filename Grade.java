@@ -34,16 +34,5 @@ public class Grade {
         return this.isAbsent;
     }
     
-    public static Grade averageGrade(List<Grade> grades){
-        double sumOfGrades = 0;
-        int numberOfABS = 0;
-
-        for (int i = 0; i < grades.size(); i++){
-            sumOfGrades += grades.get(i).getValue();
-            if (grades.get(i).isAbsent == true)
-                numberOfABS++;
-        }
-        return new Grade(sumOfGrades/(grades.size()-numberOfABS));
-    }
 
 }
