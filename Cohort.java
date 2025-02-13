@@ -62,4 +62,26 @@ public class Cohort {
         
         return nbABS;        
     }
+
+    public Grade maxGrade(){
+        Grade maxGrade = new Grade(0.0);
+
+        for (Student student : students)
+            for (Grade grade : student.getGrades())
+                if (grade.getValue() > maxGrade.getValue())
+                    maxGrade = grade;
+
+        return maxGrade;
+    }
+
+    public Grade minGrade(){
+        Grade maxGrade = new Grade(Grade.MAXIMUM_GRADE);
+
+        for (Student student : students)
+            for (Grade grade : student.getGrades())
+                if (grade.getValue() < maxGrade.getValue() && !grade.isAbsent())
+                    maxGrade = grade;
+                    
+        return maxGrade;
+    }
 }
