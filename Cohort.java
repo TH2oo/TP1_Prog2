@@ -41,14 +41,14 @@ public class Cohort {
         }
     }
 
-    public int studentPass(){
+    public int guessStudentPass(){
         int numberStudentPass = 0;
 
         for (Student students : this.students){
             if (students.averageGrade().getValue() >= 10)
                 numberStudentPass++;
         }
-        
+
         return numberStudentPass;
     }
 }
