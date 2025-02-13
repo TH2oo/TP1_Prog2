@@ -34,12 +34,7 @@ public class Student {
     }
 
     public Grade averageGrade(){
-        List<Grade> listGrades = this.getGrades();
-        double sumOfGrades = 0;
-        for (Grade grades : listGrades){
-            sumOfGrades += grades.getValue();
-        }
-        return new Grade(sumOfGrades/listGrades.size());
+        return Grade.averageGrade(getGrades());
     }
 
     public void printResults(){
