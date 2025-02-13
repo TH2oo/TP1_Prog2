@@ -8,7 +8,7 @@ public class Main {
 
         // Ajouter des notes aux étudiants
         student1.addResult("Programmation 2", new Grade(18.0));
-        student1.addResult("Structures discrètes", new Grade(17.0));
+        student1.addResult("Structures discrètes", new Grade());
 
         student2.addResult("Programmation 2", new Grade(8.0));
         student2.addResult("Structures discrètes", new Grade(22.0));
@@ -32,5 +32,7 @@ public class Main {
         cohort.printStudentsResults();
 
         System.out.println(cohort.guessStudentPass());
+
+        System.out.println(cohort.numberOfABS());
     }
 }
