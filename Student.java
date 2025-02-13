@@ -34,7 +34,17 @@ public class Student {
     }
 
     public Grade averageGrade(){
-        return Grade.averageGrade(getGrades());
+        double sumResult = 0;
+        int sumToken = 0;
+
+        for (TeachingUnitResult result : results){
+            if (!result.getGrade().isAbsent()){
+                sumResult += result.getGrade().getValue() * result.getTeachingUnit().getToken();
+                sumToken += result.getTeachingUnit().getToken();
+            }
+        }
+
+        return new Grade(sumResult / sumToken);
     }
 
     public void printResults(){
