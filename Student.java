@@ -9,7 +9,7 @@ public class Student {
     public Student(String firstName, String lastName){
         this.firstName = firstName;
         this.lastName = lastName;
-        this.results = results;
+        this.results = new ArrayList<>();
     }
 
     public boolean equals(Object o){
@@ -28,8 +28,4 @@ public class Student {
         }
         return grades;
     }
-
-
-    
-
 }
