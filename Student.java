@@ -28,4 +28,25 @@ public class Student {
         }
         return grades;
     }
+
+    public String toString(){
+        return this.firstName + " " + this.lastName;
+    }
+
+    public Grade averageGrade(){
+        List<Grade> listGrades = this.getGrades();
+        double sumOfGrades = 0;
+        for (Grade grades : listGrades){
+            sumOfGrades += grades.getValue();
+        }
+        return new Grade(sumOfGrades/listGrades.size());
+    }
+
+    public void printResults(){
+        System.out.println(this.toString());
+        for (TeachingUnitResult grades : this.results){
+            System.out.println(grades.toString());
+        }
+        System.out.println("Note Moyenne : "+ this.averageGrade().toString());
+    }
 }
