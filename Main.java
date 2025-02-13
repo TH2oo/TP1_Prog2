@@ -40,5 +40,7 @@ public class Main {
 
         System.out.println("La meilleure note de la promo: " + cohort.maxGrade().getValue());
         System.out.println("La pire note de la promo: " + cohort.minGrade().getValue());
+
+        System.out.println("La moyenne de la promo: " + cohort.averageCohort().getValue());
     }
 }
