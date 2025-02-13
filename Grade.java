@@ -1,5 +1,3 @@
-import java.util.List;
-
 public class Grade {
     public static final int MAXIMUM_GRADE = 20;
     private final double value;
