@@ -14,4 +14,8 @@ public class TeachingUnit {
     public String getName(){
         return this.name;
     }
+
+    public int getToken(){
+        return this.token;
+    }
 }
