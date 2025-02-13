@@ -1,7 +1,7 @@
 import java.util.List;
 
 public class Grade {
-    private static final int MAXIMUM_GRADE = 20;
+    public static final int MAXIMUM_GRADE = 20;
     private final double value;
     private final boolean isAbsent;
 
