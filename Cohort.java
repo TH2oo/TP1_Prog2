@@ -37,6 +37,7 @@ public class Cohort {
 
         for (Student student : this.students){
             student.printResults();
+            System.out.println("\n");
         }
     }
 }
