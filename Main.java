@@ -7,17 +7,17 @@ public class Main {
         Student student4 = new Student("Le", "Lobotomisateur");
 
         // Ajouter des notes aux étudiants
-        student1.addResult("Programmation 2", new Grade(18.0));
-        student1.addResult("Structures discrètes", new Grade());
+        student1.addResult(new TeachingUnit("Programmation 2", 6), new Grade(18.0));
+        student1.addResult(new TeachingUnit("Structures discrètes", 3), new Grade());
 
-        student2.addResult("Programmation 2", new Grade(8.0));
-        student2.addResult("Structures discrètes", new Grade(19.0));
+        student2.addResult(new TeachingUnit("Programmation 2", 6), new Grade(8.0));
+        student2.addResult(new TeachingUnit("Structures discrètes", 3), new Grade(19.0));
 
-        student3.addResult("Programmation 2", new Grade(8.0));
-        student3.addResult("Structures discrètes", new Grade(3.0));
+        student3.addResult(new TeachingUnit("Programmation 2", 6), new Grade(8.0));
+        student3.addResult(new TeachingUnit("Structures discrètes", 3), new Grade(3.0));
 
-        student4.addResult("Programmation 2", new Grade());
-        student4.addResult("Structures discrètes", new Grade(12.0));
+        student4.addResult(new TeachingUnit("Programmation 2", 6), new Grade());
+        student4.addResult(new TeachingUnit("Structures discrètes", 3), new Grade(12.0));
 
         // Créer une promotion (instance de Cohort)
         Cohort cohort = new Cohort("L2 informatique");
